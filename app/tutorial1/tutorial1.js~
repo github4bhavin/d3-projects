@@ -1,0 +1,14 @@
+
+
+$(document).ready(function(){
+
+var body  = d3.select("body");
+
+body.append("section")
+		 .attr("id" , "section1")
+	 .append("div")
+	 	 .attr("class", "blue box")
+	 .append("p")
+	 	 .text("dynamic blue box"); 
+
+});

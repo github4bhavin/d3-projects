@@ -1,0 +1,74 @@
+<html>
+<head>
+<title>tutorial 1</title>
+<script type="text/javascript" src="/projects/d3/js/d3.js"></script>
+<script type="text/javascript" src="/projects/d3/js/jquery.min.js"></script>
+<script type="text/javascript" src="/projects/d3/app/tutorial1/tutorial1.js"></script>
+<script type="text/javascript" src="/projects/d3/app/tutorial1/tutorial2.js"></script>
+<script type="text/javascript" src="/projects/d3/app/tutorial1/tutorial3.js"></script>
+<script type="text/javascript" src="/projects/d3/app/tutorial1/barChart.js"></script>
+
+
+<style>
+
+.chart{
+	float : left;
+	padding : 1%;
+	border : 1px solid #DDD;
+}
+
+
+.chart rect:hover{ fill: royalblue;}
+.chart rect {
+	fill : steelblue;
+}
+
+.chart text { 
+	fill : #FFF;
+	//text-anchor : end;
+	font-size : .75em;
+ }
+
+.axis text { font : .75em; sans-serif ; fill: #555; }
+.axis path ,
+.axis line {
+	fill : none;
+	stroke : #555;
+	shape-rendering : crispEdges;
+}
+.x.grid.minor line:hover { stroke : #555;  stroke-width:3; }
+.x.grid.minor { stroke : #999; }
+
+.y.grid.minor line:hover { stroke : #555; stroke-width : 3; }
+.y.grid.minor { strok : #999; }
+.x.grid, .y.grid { stroke : #888; }
+
+</style>
+
+<script>
+
+$(document).ready(function(){
+   var bChart = new  barChart({ 
+   					chartArea : { width : 500, height : 300 ,
+   					              margin: { top : 50 , bottom : 50 , left : 50 , right : 50 }
+   					            } ,
+   					data : [50,5,20,30,40,23,33,56,100],
+   					chartElement : '#chart-bar-library'
+   				});
+   				
+	bChart.draw();
+ 	
+});
+
+</script>
+
+</head>
+<body></body>
+
+<div class="chart" id="chart-bar-horizontal"></div>
+<div class="chart" id="chart-bar-vertical"></div>
+<div class="chart" id="chart-bar-vertical-scale"></div>
+
+<div class="chart" id="chart-bar-library"></div>
+
+</html>

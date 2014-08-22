@@ -1,0 +1,10 @@
+<html>
+<head>
+<title>tutorial 1</title>
+<script type="text/javascript" src="/projects/d3/js/d3.js"></script>
+
+<script type="text/javascript" src="/projects/d3/app/tutorial1/tutorial1.js"></script>
+
+</head>
+<body></body>
+</html>
